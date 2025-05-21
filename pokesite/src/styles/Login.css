@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #0b0c10;
+  color: #c5c6c7;
+}
+
+.login-form {
+  flex: 0 0 30%; /* 30% da largura fixa */
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1f2833;
+}
+
+.login-form h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: #66fcf1;
+}
+
+.login-form p {
+  margin-bottom: 2rem;
+  color: #45a29e;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-form input {
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #0b0c10;
+  color: #c5c6c7;
+}
+
+.login-form input::placeholder {
+  color: #45a29e;
+}
+
+.login-form input:focus {
+  outline: 2px solid #66fcf1;
+  background-color: #0b0c10;
+}
+
+.login-form button {
+  padding: 15px;
+  background-color: #45a29e;
+  border: none;
+  border-radius: 5px;
+  color: #0b0c10;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #66fcf1;
+}
+
+.login-form .register-link {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  color: #45a29e;
+  text-align: center;
+}
+
+.login-form .register-link a {
+  color: #66fcf1;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.login-form .register-link a:hover {
+  text-decoration: underline;
+}
+
+.login-image {
+  flex: 0 0 70%; /* 70% da largura fixa */
+  overflow: hidden;
+}
+
+.login-image img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .login-form {
+    flex: none;
+    width: 100%;
+    padding: 40px 20px;
+    min-height: 400px;
+  }
+
+  .login-image {
+    flex: none;
+    height: 250px;
+    width: 100%;
+  }
+
+  .login-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-form h1 {
+    font-size: 2rem;
+  }
+
+  .login-form p {
+    font-size: 1rem;
+  }
+
+  .login-form input {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .login-form button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .login-image {
+    height: 180px;
+  }
+}
