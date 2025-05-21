@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #1e1a16; /* fundo geral escuro */
+  color: #ffb347;
+}
+
+.register-form {
+  flex: 0 0 30%;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2e1b0e; /* fundo do form escuro com tom quente */
+  color: #ffe0b2;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.register-form h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #ff944d;
+}
+
+.register-form p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.register-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.register-form input,
+.register-form select {
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #3c2e25;
+  color: #ffe0b2;
+  font-weight: 600;
+}
+
+.register-form input::placeholder {
+  color: #d97b00;
+}
+
+.register-form select {
+  cursor: pointer;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  outline: 2px solid #ff7f11;
+  background-color: #4a372d;
+}
+
+.register-form button {
+  padding: 15px;
+  background-color: #ff7f11;
+  border: none;
+  border-radius: 5px;
+  color: #1e1a16;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #ffa94d;
+  color: #1e1a16;
+}
+
+.register-form .login-link {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  color: #ffe0b2;
+  text-align: center;
+}
+
+.register-form .login-link a {
+  color: #ffb347;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.register-form .login-link a:hover {
+  text-decoration: underline;
+}
+
+.register-image {
+  flex: 0 0 70%;
+  overflow: hidden;
+  background: #1e1a16;
+}
+
+.register-image img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .register-form {
+    flex: none;
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .register-image {
+    flex: none;
+    height: 300px;
+    width: 100%;
+  }
+
+  .register-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
