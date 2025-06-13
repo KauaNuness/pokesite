@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import NotFound from './pages/NotFound';
 import Pokemons from './pages/Pokemons';
+import PokemonEspecifico from './pages/PokemonEspecifico';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,8 +14,9 @@ root.render(
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="*" element={<NotFound />} /> {/* 👈 rota 404 */}
-        <Route path="/pokemons" element={<Pokemons />} /> {/* 👈 nova rota */}
+        <Route path="/pokemons" element={<Pokemons />} />
+        <Route path="/pokemon/:name" element={<PokemonEspecifico />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
